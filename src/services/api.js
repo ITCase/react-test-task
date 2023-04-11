@@ -70,27 +70,62 @@ const products = [
   },
 ]
 
-export function getSizes() {
+function getSizes() {
   return new Promise((resolve) => {
     setTimeout(() => resolve(sizes), 250)
   })
 }
 
-export function getProducts() {
+function getSize(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const size = sizes.find((size) => size.id == id)
+      if (size) {
+        resolve(size)
+      } else {
+        reject(new Error('getSize: Size not found'))
+      }
+    }, 250)
+  })
+}
+
+function getProducts() {
   return new Promise((resolve) => {
     setTimeout(() => resolve(products), 250)
   })
 }
 
-export function getProduct(id) {
+function getProduct(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const product = products.find((product) => product.id == id)
       if (product) {
         resolve(product)
       } else {
-        reject(new Error('Product not found'))
+        reject(new Error('getProduct: Product not found'))
       }
     }, 250)
   })
 }
+
+function getProductColor(productID, colorID) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const product = products.find((product) => product.id == productID)
+
+      if (!product) {
+        return reject(new Error('getProductColor: Product not found'))
+      }
+
+      const color = product.colors.find((color) => color.id == colorID)
+
+      if (color) {
+        resolve(color)
+      } else {
+        reject(new Error('getProductColor: Color not found'))
+      }
+    }, 250)
+  })
+}
+
+export { getSizes, getSize, getProducts, getProduct, getProductColor }
