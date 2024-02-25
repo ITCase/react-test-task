@@ -7,6 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+nav {
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  margin-right: 50px;
+  color: black;
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -49,4 +61,83 @@ code {
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  text-align: center;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.product-item {
+  box-sizing: content-box;
+  text-decoration: none;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.product-item-title {
+  text-underline: none;
+  text-decoration: none;
+  color: black;
+  margin: 4px;
+  text-align: center;
+}
+
+.product-card {
+  width: 80%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.image-container {
+  height: 600px;
+  margin: 20px;
+}
+
+.image {
+  max-width: 400px;
+  max-height: 600px;
+  border: 1px solid black;
+}
+
+.image-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.controls-button {
+  width: 50px;
+}
+
+.price span {
+  font-weight: bold;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.product-button {
+  margin-right: 5px;
+  background-color: white;
+}
+
+.product-button__active {
+background-color: #99cbff;
 }
