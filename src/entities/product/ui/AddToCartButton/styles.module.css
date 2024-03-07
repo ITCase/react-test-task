@@ -1,0 +1,20 @@
+.add-cart-button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3e6eb;
+    color: #f5222d;
+    font-weight: 500;
+    border-radius: 6px;
+    letter-spacing: -.2px;
+    min-height: 33px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:where(:focus, :hover) {
+        color: #f5222d;
+        background-color: #f5d1d6;
+
+    }
+}

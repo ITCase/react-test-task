@@ -112,11 +112,9 @@ function getProductColor(productID, colorID) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const product = products.find((product) => product.id == productID)
-
       if (!product) {
         return reject(new Error('getProductColor: Product not found'))
       }
-
       const color = product.colors.find((color) => color.id == colorID)
 
       if (color) {

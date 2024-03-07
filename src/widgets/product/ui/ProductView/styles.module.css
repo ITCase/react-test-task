@@ -1,0 +1,30 @@
+.product {
+    display: flex;
+    row-gap: 1.5rem;
+    flex-direction: column;
+}
+
+.product-content {
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: center;
+    flex: 1 1 auto;
+
+    .product__image, .product-info {
+        flex: 0 1 50%;
+    }
+
+    .product__image img {
+        width: 100%;
+    }
+
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        .product__price {
+            font-weight: 500;
+        }
+    }
+}

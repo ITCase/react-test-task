@@ -1,0 +1,26 @@
+.cart-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  grid-gap: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+
+    .cart-item__price {
+        font-weight: 500;
+    }
+
+    .cart-item__delete {
+        border: none;
+        background: transparent;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: red;
+    }
+}
