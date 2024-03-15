@@ -1,6 +1,7 @@
 {
   "name": "react-test-task",
   "version": "0.1.0",
+  "contacts": "t.me/packfm",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
